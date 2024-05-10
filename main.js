@@ -21,3 +21,39 @@ h3Element.style.color = "blue";
 
 container.appendChild(h3Element);
 
+const content2 = document.createElement("div");
+content2.classList.add("content2");
+content2.style.cssText = "color: blue; backround: white";
+
+
+container.appendChild(content2);
+
+const h1Element = document.createElement("h1");
+h1Element.classList.add("h1Element");
+h1Element.textContent = "I’m a div";
+
+content2.appendChild(h1Element);
+
+container.appendChild(h1Element);
+
+
+// the JavaScript file
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function (e) {
+    e.target.style.background = "blue";
+  });
+
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
+
+
+  
+
