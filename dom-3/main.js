@@ -11,7 +11,6 @@ const h3Element = document.createElement("h3");
 h3Element.classList.add("h3Element");
 h3Element.textContent = "I'm a blue h3";
 h3Element.style.cssText = "color: blue";
-
 container.appendChild(h3Element);
 
 const newDiv = document.createElement("div");
@@ -30,3 +29,11 @@ para2.textContent = "ME TOO!";
 newDiv.appendChild(para2);
 
 container.appendChild(newDiv);
+
+let btn = document.querySelector("#btn");
+
+function display() {
+  alert("It was clicked!");
+}
+
+btn.addEventListener("click", display);
